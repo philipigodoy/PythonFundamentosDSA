@@ -1,0 +1,51 @@
+# Calculadora em Python
+
+def soma(arg1, arg2):
+	return arg1 + arg2
+
+def subtracao(arg1, arg2):
+	return arg1 - arg2
+
+def multiplicacao(arg1, arg2):
+	return arg1 * arg2
+
+def divisao(arg1, arg2):
+	return arg1 / arg2
+
+print("------ Python Calculator ------\n")
+
+print("Escolha uma das opções: ")
+print("1-Soma\n2-Subtração\n3-Multiplicação\n4-Divisão\n5-Sair\n")
+
+
+while True:
+	op = 0
+	op = int(input("escolha a operação: "))
+	if op not in range(1,6):
+		print("Escolha uma opção válida!")
+		continue
+	elif op == 5:
+		print("Saindo ...")
+		break
+	
+	num1 = int(input("Digite um número: "))
+	num2 = int(input("Digite outro número: "))
+
+	if op == 1:
+		print(str(num1) + " + " + str(num2) + " = " + "{}" .format(soma(num1,num2)))
+
+	elif op == 2:
+		print(str(num1) + " - " + str(num2) + " = " + "{}" .format(subtracao(num1,num2)))
+
+	elif op == 3:
+		print(str(num1) + " x " + str(num2) + " = " + "{}" .format(multiplicacao(num1,num2)))
+
+	elif op == 4:
+		if num2 == 0:
+			print("Impossível divisão por Zero!")
+			continue
+		else:
+			print(str(num1) + " ÷ " + str(num2) + " = " + "{}" .format(divisao(num1,num2)))
+
+
+
